@@ -1,0 +1,10 @@
+services:
+  marimo:
+    image: ghcr.io/astral-sh/uv:python3.12-bookworm
+    working_dir: /app/
+    tty: true
+    command: bash
+    volumes:
+      - ./src/:/app/
+    ports:
+      - "8000:8000"
